@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Auto Close Tabs</title>
+  <style>
+    :root { font-family: "Segoe UI", "Helvetica Neue", sans-serif; color: #0f172a; }
+    body { margin: 0; padding: 12px 14px 14px; width: 260px; background: #f8fafc; }
+    h1 { font-size: 1.05rem; margin: 0 0 10px; }
+    .card { background: #fff; border: 1px solid #e2e8f0; border-radius: 10px; padding: 12px; box-shadow: 0 8px 20px rgba(15,23,42,0.05); }
+    button { width: 100%; padding: 10px; border: none; border-radius: 8px; background: #0ea5e9; color: #fff; font-weight: 700; cursor: pointer; box-shadow: 0 8px 18px rgba(14,165,233,0.22); }
+    button:hover { background: #0284c7; }
+    .status { font-size: 13px; margin-top: 8px; color: #16a34a; }
+    .status.error { color: #dc2626; white-space: pre-wrap; }
+    .meta { font-size: 12px; color: #475569; margin-top: 6px; }
+    a { color: #0ea5e9; text-decoration: none; font-weight: 600; }
+    a:hover { text-decoration: underline; }
+  </style>
+</head>
+<body>
+  <h1>Auto Close Tabs</h1>
+  <div class="card">
+    <button id="run">Run now</button>
+    <div class="status" id="status"></div>
+    <div class="status error" id="errors"></div>
+    <div class="meta" id="meta"></div>
+    <div class="meta"><a href="#" id="open-options">Edit regex patterns in Options</a></div>
+  </div>
+  <script src="popup.js"></script>
+</body>
+</html>
