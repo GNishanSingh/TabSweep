@@ -1,0 +1,95 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>TabSweep — Regex-powered tab cleaner</title>
+  <style>
+    :root {
+      font-family: "Inter", "Segoe UI", "Helvetica Neue", sans-serif;
+      color: #0f172a;
+      background: radial-gradient(circle at 20% 20%, #e0f2fe, #f8fafc 36%), radial-gradient(circle at 80% 0%, #d9f99d, #f8fafc 28%), #f8fafc;
+    }
+    body { margin: 0; padding: 0; }
+    .page { max-width: 960px; margin: 0 auto; padding: 28px 18px 72px; }
+    header { display: flex; align-items: center; gap: 16px; margin-bottom: 24px; }
+    .logo { width: 64px; height: 64px; border-radius: 18px; box-shadow: 0 18px 45px rgba(15, 23, 42, 0.16); }
+    h1 { margin: 0; font-size: 2rem; letter-spacing: -0.01em; }
+    .subtitle { color: #475569; margin-top: 4px; }
+    .card { background: #ffffff; border: 1px solid #e2e8f0; border-radius: 16px; padding: 18px 20px; box-shadow: 0 22px 55px rgba(15, 23, 42, 0.08); margin-top: 18px; }
+    h2 { margin: 0 0 10px; font-size: 1.2rem; }
+    ul { margin: 0; padding-left: 20px; color: #475569; line-height: 1.55; }
+    .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 14px; margin-top: 12px; }
+    a.button {
+      display: inline-flex; align-items: center; gap: 10px;
+      padding: 12px 16px; border-radius: 10px; background: #0ea5e9;
+      color: #fff; text-decoration: none; font-weight: 700; box-shadow: 0 14px 28px rgba(14, 165, 233, 0.32);
+      transition: transform 120ms ease, box-shadow 120ms ease, background 120ms ease;
+    }
+    a.button:hover { background: #0284c7; transform: translateY(-1px); }
+    a.button:active { transform: translateY(0); box-shadow: none; }
+    .pill { display: inline-block; padding: 6px 10px; border-radius: 999px; background: #e0f2fe; color: #0ea5e9; font-weight: 700; font-size: 12px; letter-spacing: 0.02em; }
+    footer { margin-top: 30px; color: #475569; font-size: 14px; }
+    .meta-links a { color: #0ea5e9; font-weight: 600; text-decoration: none; }
+    .meta-links a:hover { text-decoration: underline; }
+    code { background: #e2e8f0; padding: 2px 6px; border-radius: 4px; }
+  </style>
+</head>
+<body>
+  <div class="page">
+    <header>
+      <img class="logo" src="../icons/icon-128.png" alt="TabSweep logo" />
+      <div>
+        <div class="pill">MV3</div>
+        <h1>TabSweep</h1>
+        <div class="subtitle">Regex-powered tab cleaner for Chrome and Edge.</div>
+      </div>
+    </header>
+
+    <div class="grid">
+      <div class="card">
+        <h2>Why</h2>
+        <ul>
+          <li>Auto-close tabs whose URLs match your regex list.</li>
+          <li>Immediate or idle-close modes; optional “close on click.”</li>
+          <li>Pinned/non-HTTP(S) tabs are always safe.</li>
+        </ul>
+      </div>
+      <div class="card">
+        <h2>Safety</h2>
+        <ul>
+          <li>Patterns live in <code>storage.sync</code>; nothing leaves your browser.</li>
+          <li>Live regex validation blocks saves until patterns compile.</li>
+          <li>No analytics, ads, or tracking libraries.</li>
+        </ul>
+      </div>
+      <div class="card">
+        <h2>How to use</h2>
+        <ul>
+          <li>Open Options → add one regex per line.</li>
+          <li>Choose close mode and idle delay.</li>
+          <li>Hit “Run now” in the popup to scan existing tabs.</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="card" style="margin-top:18px;">
+      <h2>Download</h2>
+      <p class="subtitle">Side-load while publishing to stores.</p>
+      <a class="button" href="../dist/tabsweep-1.0.0.zip">Download zip</a>
+    </div>
+
+    <div class="card" style="margin-top:14px;">
+      <h2>Privacy</h2>
+      <p>See the full policy for data handling and permissions.</p>
+      <a class="button" href="../privacy.html">Privacy policy</a>
+    </div>
+
+    <footer>
+      <div class="meta-links">
+        <a href="https://github.com/GNishanSingh/TabSweep">GitHub Repository</a>
+      </div>
+    </footer>
+  </div>
+</body>
+</html>
